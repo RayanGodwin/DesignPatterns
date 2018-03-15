@@ -1,5 +1,8 @@
 //: Playground - noun: a place where people can play
-// Creation logic is placed in the sub classes of parent abstract Factory. 
+
+// Creation logic is placed in the sub classes of parent abstract Factory,
+// Works on the template pattern to forward the call from parent to child class.
+// It is used in instances where we need to do more than just object creation, like factory method also wants to control the object created.
 
 import UIKit
 
@@ -9,65 +12,84 @@ protocol Subject {
     func read()
 }
 
-protocol SubjectFactory {
-    func createSubject(name: String) -> Subject     // Factory Method
-}
-
 class Mathematics: Subject {
     var name: String
     
-    required init (name: String) {
+    required init(name: String) {
         self.name = name
     }
     
     func read() {
-        print ("\(name) is not easy when compared to Chemistry but easier than Physics")
+        print("Maths is tough")
     }
 }
 
 class Physics: Subject {
-    var name: String = "Physics"
-    
-    required init (name: String) {
+    var name: String
+
+    required init(name: String) {
         self.name = name
     }
     
     func read() {
-        print ("\(name) is not easy when compared to maths but easier than Chemistry")
-    }
-}
-
-class Chemistry: Subject {
-    var name: String = "Chemistry"
-    
-    required init (name: String) {
-        self.name = name
+        print("Physics is tougher")
     }
     
-    func read() {
-        print("\(name) is easiest of all and also interesting specially when it comes to chemical equations")
+}
+
+protocol BaseFactory : class {
+    var subjectToDeliver: Subject! { get set }
+    var shippingCharge: Double! { get set }
+    
+    // Factory method that contains the creation as well as managing the product.
+    func orderSubject(name: String)
+    func createSubject(name: String)
+    func calculateShippingCharge()
+    func deliver()
+}
+
+extension BaseFactory {
+    public func orderSubject(name: String) {
+        self.createSubject(name: name)
+        self.calculateShippingCharge()
+        self.deliver()
+    }
+    
+    public func deliver() {
+        print ("Shipping charges would be \(shippingCharge)")
     }
 }
 
-class MathematicsFactory: SubjectFactory {
-    func createSubject(name: String) -> Subject {
-        return Mathematics(name: name)
+class AmazonPhysicsFactory: BaseFactory {
+    var subjectToDeliver: Subject!
+    var shippingCharge: Double!
+    
+    public func createSubject(name: String) {
+        subjectToDeliver = Physics(name: name)
+    }
+    
+    public func calculateShippingCharge() {
+        shippingCharge = 10.00
     }
 }
 
-class PhysicsFactory: SubjectFactory {
-    func createSubject(name: String) -> Subject {
-        return Physics(name: name)
+class AmazonMathematicsFactory: BaseFactory {
+    var subjectToDeliver: Subject!
+    var shippingCharge: Double!
+    
+    public func createSubject(name: String) {
+        subjectToDeliver = Mathematics(name: name)
+    }
+    
+    public func calculateShippingCharge() {
+        shippingCharge = 20.00
     }
 }
 
-class ChemistryFactory: SubjectFactory {
-    func createSubject(name: String) -> Subject {
-        return Chemistry(name: name)
-    }
-}
+let physicsFactory = AmazonPhysicsFactory()
+let mathematicsFactory = AmazonMathematicsFactory()
 
-MathematicsFactory().createSubject(name: "Mathematics").read()
-PhysicsFactory().createSubject(name: "Physics").read()
-ChemistryFactory().createSubject(name: "Chemistry").read()
+physicsFactory.orderSubject(name: "Physics")
+mathematicsFactory.orderSubject(name: "Mathematics")
+
 
