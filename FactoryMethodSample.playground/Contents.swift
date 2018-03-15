@@ -1,5 +1,5 @@
 //: Playground - noun: a place where people can play
-// Creation logic is placed in the sub classes of abstract Factory. This can be used to avoid the switch case as in Factory design pattern. However the client now has to be more clever to know as to which concrete factory has to be used based on the type of the object that is required. Accomodating a new Product requries an addition to the list of factory subclasses.
+// Creation logic is placed in the sub classes of parent abstract Factory. 
 
 import UIKit
 
