@@ -1,0 +1,66 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf400
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww13020\viewh12100\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 Advanced Debugging Tips
+\b0 \
+1) PO is more successful now (which used to give errors earlier)\
+\
+2) Debug Tab (this was there in Xcode 9.3 as well)\
+\
+3) expression command along with breakpoints can change the values of variables on the run (this was there in Xcode 9.3 as well)\
+\
+4) expression command along with breakpoints can make changes to the code on the run without requiring to recompile. (this was there in Xcode 9.3 as well)\
+\
+5) With Symbolic breakpoint one can add a breakpoint to stop without even getting to the exact line on the editor, Xcode will resolve it and add child breakpoints depending on the number of occurrences the line. However the catch is that you will have to type in the line in the respective language. One can set a condition to the symbolic breakpoint so that it is triggered only if the condition is met.\
+\
+6) In the video, demonstrator uses the debugger command to get to the line which was leading to an issue using one shot breakpoint (which is a breakpoint that will be triggered only once and then it will removed automatically)\
+breakpoint set \'97one-shot true \'97name \'93-[UILabel setText:]\'94\
+In the assembly language we can use po $arg1 to get to know about the object on which the method is invoked, po (SEL) $arg2 to get to know the method, po  $arg3 to get the argument value\
+\
+7) We can ask a compiler to skip over a line using the instruction pointer (Present in Xcode 9.3) or by using the command in the breakpoint \
+thread jump \'97by 1\
+\
+Using the above command along with expression command one can make compiler execute a line of code with another.\
+\
+8) We can customise debugDescription by providing a value for property debugDescription and we can also use \'93p\'94 command which uses built in format specifiers of LLDB\
+\
+9) Using watchpoint breakpoint for a variable one can create a breakpoint to be triggered when the value of breakpoint changes.\
+\
+10) expression -l objc -O -- [`self.view` recursiveDescription] to get the subviews in debug console\
+\
+11) Commands can be given aliases as shown below\
+command alias pod expression -l objc -o --\
+\
+12) po unsafeBitCast to see the debug description of object and can change the values on the object being examined.\
+\
+13) \'93expression CATransaction.flush()\'94 can be used to nudge the views in debugging mode\
+\
+\
+
+\b Using Collections Effectively\
+
+\b0 1) Slices are a part of collection with start and end index. They are separate from their originating collection and they occupy no extra space because they simply refer back to their original collection. \
+\
+2) When subscripted slices read from their original buffer and share the same indices as their originating collection.\
+\
+3) Slices keep originating collection alive, so to free up the originating collection people make a copy of slice. This technique is called lazy copying\
+\
+4) Lazy computing which works well with functions. It works with LazyCollections. Avoids computation till the point it is truly required and avoid allocation of extra space for computation.\
+\
+5) Lazy computing performs the computation every time the result is invoked, which can be avoided if you can create a new Collection from the result of lazy computation.\
+\
+6) Lazy should be used for chained computation to avoid memory allocations, when one needs only part of a result of the entire computation.\
+\
+7) Indices of collection changes when the mutation of collection is done this holds true for all the collections including Dictionaries\
+\
+ \
+\
+\
+\
+\
+\
+}

@@ -1,0 +1,463 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;\f2\froman\fcharset0 Times-Roman;
+\f3\fnil\fcharset0 Verdana;}
+{\colortbl;\red255\green255\blue255;\red52\green52\blue52;\red255\green255\blue255;\red255\green255\blue255;
+\red0\green0\blue0;\red28\green28\blue28;\red26\green26\blue26;\red255\green255\blue255;\red0\green0\blue0;
+}
+{\*\expandedcolortbl;;\cssrgb\c26667\c26667\c26667;\cssrgb\c100000\c100000\c100000;\csgray\c100000;
+\cssrgb\c0\c0\c0;\cssrgb\c14510\c14510\c14510;\cssrgb\c13333\c13333\c13333;\csgenericrgb\c100000\c100000\c100000;\csgenericrgb\c0\c0\c0;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid101\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid102\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid501\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}
+{\list\listtemplateid7\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid601\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid7}
+{\list\listtemplateid8\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid701\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid8}
+{\list\listtemplateid9\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid801\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid9}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}{\listoverride\listid7\listoverridecount0\ls7}{\listoverride\listid8\listoverridecount0\ls8}{\listoverride\listid9\listoverridecount0\ls9}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww23280\viewh14960\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs28 \cf0 \ul \ulc0 Program to interface vs implementation:
+\b0\fs24 \ulnone \
+Protocols have disadvantage if interfaces change then that gets propagated to all the classes that implement, however abstract classes could be used which doesn\'92t require modifications in all sub classes. As there\'92s no multiple inheritance in ObjectiveC we need to use protocols to share the behaviour, the best combo is to first go with abstract classes and then combine protocols if multiple inheritance is required.\
+\
+
+\b\fs28 \ul Composition vs Inheritance:
+\fs24 \
+
+\b0 \ulnone Composition is black box designing whereas Inheritance is white box designing\
+In Inheritance internal representation and details of parent classes are often visible to subclasses, object composition on the other side require objects to have well defined interfaces and internal representation is not visible. \
+\
+
+\b Benefits of Inheritance
+\b0 \
+Inheritance is easy to use as the paren-child relationship is easy to represent and is done at compile time and easy to modify. \
+Code sharing between parent and child classes.\
+\
+
+\b Benefits of Composition\
+
+\b0 Data encapsulation is not lost as implementation is not exposed\
+Classes will tend to remain small and more manageable.
+\b \
+\
+Drawback with Composition
+\b0 \
+Design will tend to have more classes\
+Behaviour of system will depend upon relationships between classes instead of being defined in one class.\
+\
+
+\b Drawback with inheritance
+\b0  \
+Data encapsulation is lost as child classes get to know the details and implementation of parent classes \
+Any change in parent\'92s implementation will force it\'92s subclasses to change as well.\
+\
+\
+
+\b\fs36 \ul Creation Of Objects
+\b0\fs24 \ulnone \
+
+\b\fs28 \ul Factory Pattern:\
+
+\b0\fs24 \ulnone Used when you don\'92t know the class type to be used during compile time, depends on inheritance. It is built on a factory method held in the parent factory, which is overridden by Child Factories to produce the actual products. One advantage is consumer doesn\'92t require any changes for introduction of new type. Use for creating a single product.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2017-02-23 at 11.41.30 PM.png \width12280 \height4680
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+
+\b\fs28 \ul Abstract Factory Pattern: \
+
+\b0\fs24 \ulnone Variant of Factory Pattern and works on composition and works on class factory method which returns the concrete factory, which then produces the actual product, returns the object immediately. NSNumber is an example of Abstract Factory pattern.\
+It requires changes in interface if a new product has to be introduced which is one of the disadvantage. Used for creating families of products.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2017-02-23 at 11.40.38 PM.png \width12500 \height5540
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b\fs30 \cf0 \ul Builder Pattern:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b0\fs24 \cf0 \ulnone Used for building complex objects which can be created in multiple ways. Apart from client, requires a Director(One who directs as to what is to be built) and Builder(Who knows as to how to build). Multi step process and the end product is obtained only after a sequence of steps.\
+One of the use is to reduce the number of parameters being passed in a function call, also helpful in building URL\'92s.\
+One drawback of builder pattern is that there would be lot of nested invocations before the actual product is obtained.\
+\
+
+\b\fs28 \ul Singleton Pattern:\
+
+\b0\fs24 \ulnone Created for having single instance throughout, using dispatch_once for thread safety. Drawback is that memory is occupied till the end and if the singleton strongly holds some object then special care has to be taken to free that memory. Abuse of this pattern may lead to app being less responsive.\
+\
+
+\b Subclassing Singleton\
+
+\b0 A singleton class is most of the times not subclassed but there may be a need where in one may require to have two instances of singleton, the cleaner approach is to subclass the singleton and within the sharedInstance method change the [[Singleton alloc] init] to [[[self class] alloc] init]. This is not desirable as it leads to two instances of singleton which is really not serving the purpose of singleton.\
+\
+
+\b Multiton Pattern
+\fs28 \ul \
+
+\b0\fs24 \ulnone Not an ObjectiveC pattern but created to have multiple instances of Singleton based on the key passed for the static method. A dictionary is held in private which holds the object instances for every key that is passed in.\
+\
+\
+
+\b\fs36 \ul Interface Adapting
+\fs32 \
+
+\fs28 Adapter Pattern:\
+
+\b0\fs24 \ulnone It involves client, target, adapter and adaptee. Intention of this design pattern is to make facilitate communication between two different objects namely client and adaptee using an adapter in between which implements interfaces defined in Target. Implemented through two ways Class Adapter or Object Adapter. Class Adapter works on inheritance whereas Object Adapter works on composition.  \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2017-03-02 at 7.11.18 PM.png \width11020 \height4360
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+In Class Adapter, the adapter class implements the interface defined in the target and also inherits from Adaptee class, so when a request is received in one of it\'92s delegate method it forwards the request to it\'92s super class which is adaptee class.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2017-03-02 at 7.13.48 PM.png \width10040 \height4100
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+In object adapter pattern, the adapter class instead of inheriting from adaptee class contains an instance of the adaptee class so that it forwards the call to the adaptee instance.\
+\
+Adapter pattern is similar to that of delegation, as an example we can think of UITableView (client) which interacts with our controller (adapter which implements the interfaces defined in UITableViewDelegate) using delegates. In this example UITableViewDelegate protocol is the target, whereas adaptee would be the object to which the call is forwarded by our controller from the delegate method. \
+\
+Another popular approach of employing adapter pattern is through categories. Suppose there are two classes ClassA and ClassB which need to interact in a manner where ClassB requires some information from ClassA. If we add these additional methods which are used by only ClassB in ClassA then there would be a tight coupling between both classes. This won\'92t be reusable and hard to maintain code, instead these additional methods required by ClassB are added as categories within the implementation file of ClassB. Since the category is in implementation file of ClassB it\'92s not visible publicly but can be used only within ClassB.\
+\
+
+\b\fs28 \ul Bridge Pattern:\
+
+\b0\fs24 \ulnone It works on the oldest principle of \'93prefer Composition over Inheritance\'94. The proper implementation comes with experience and is employed to avoid creation of multiple subclasses which are orthogonal to one another. Example of shapes and colours.\
+\
+Shapes would be the interface for various shapes namely circle, rectangle, squares and so on whereas colours would be an interface for colouring the shapes namely red, green, blue and so on. \
+The important thing that one has to consider is that objects do not communicate directly among themselves i.e rectangle shape class will not communicate to the red class directly. To avoid this, Shape class contains an object of type Colour which is used by the Shape class to forward the call.\
+\
+Most of the time we tend to go with inheritance and employing Bridge pattern isn\'92t that obvious but as and when refactoring is being done and we notice that there are lot of class at the same level employing inheritance to get the same functionality then it becomes a potential scope for employment of bridge pattern.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2017-02-23 at 11.47.09 PM.png \width11440 \height6780
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf2 \cb3 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+Adapter makes things work after they're designed; Bridge makes them work before they are.\cb4 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+Bridge is designed up-front to let the abstraction and the implementation vary independently. Adapter is retrofitted to make unrelated classes work together.\cf0 \cb4 \kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+
+\b\fs28 \ul Facade Pattern:\
+
+\b0\fs24 \ulnone Provides a unified interface to a set of different interfaces in a subsystem. \cf5 \expnd0\expndtw0\kerning0
+Fa\'e7ade defines a higher-level interface that makes the subsystem easier to use by reducing complexity and hiding the communication and dependencies among subsystems.
+\f1\fs26\fsmilli13333  
+\f0\fs24 It works as a gateway, used when your application is getting large and complex and client doesn\'92t want to know the details of how subsystem is designed and developed.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screen Shot 2017-02-23 at 11.08.01 PM.png \width12000 \height5000
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+\cf5 \expnd0\expndtw0\kerning0
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b\fs36 \cf5 \ul Decoupling Objects
+\f2\b0\fs24 \ulnone \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs28 \cf0 \kerning1\expnd0\expndtw0 \ul Mediator:
+\fs24 \
+
+\b0 \ulnone In Object-oriented programming, behaviour and roles get distributed among different classes and in the worst case scenario each object ends up knowing and operating with every other object. This may lead to hard to reuse and less maintainable code because of lot of interconnections. Mediator pattern involves a centralised place where interactions can be handled in one mediator object, other objects don\'92t interact with each other directly which reduces the interconnections and tight coupling.  \
+\
+Commonly used for the UI, wherein the UI could have different flows based on the action taken by the user. By using Mediator object UI flow is not dispersed all over the app instead an object controls the entire flow and movement across the controller.\
+\
+The mediator object knows about various target objects but target objects don\'92t interact directly, hence the interconnections between them are removed. {{\NeXTGraphic Screen Shot 2017-02-23 at 11.06.49 PM.png \width12340 \height7200
+}¬}\
+\
+
+\b\fs28 \ul Observer:\
+
+\b0\fs24 \ulnone Works on NSNotificationCenter and KVO.\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b\fs36 \cf0 \ul Abstract Collection\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs28 \cf0 Composite:\
+
+\b0\fs24 \ulnone This is partioning design pattern. \cf6 \cb3 \expnd0\expndtw0\kerning0
+The composite pattern describes that a group of objects is to be treated in the same way as a single instance of an object. The intent of a composite is to "compose" objects into tree structures to represent part-whole hierarchies. Implementing the composite pattern lets clients treat individual objects and compositions uniformly.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b\fs28 \cf6 \ul Iterator:
+\b0\fs24 \ulnone \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf7 \cb8 The idea of the iterator pattern is to take the responsibility of accessing and passing trough the objects of the collection and put it in the iterator object. The iterator object will maintain the state of the iteration, keeping track of the current item and having a way of identifying what elements are next to be iterated. Example: Enumeration.\
+Idea of iterator pattern is to decouple exploration from the structure of specific structure.\
+\
+The iterator pattern allow us to:\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl300\qj\partightenfactor0
+\ls2\ilvl1\cf7 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8259 	}\expnd0\expndtw0\kerning0
+access contents of a collection without exposing its internal structure.\
+\ls2\ilvl1\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8259 	}\expnd0\expndtw0\kerning0
+support multiple simultaneous traversals of a collection.\
+\ls2\ilvl1\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8259 	}\expnd0\expndtw0\kerning0
+provide a uniform interface for traversing different collection.\
+\pard\tx566\tx1133\pardeftab720\sl300\qj\partightenfactor0
+
+\f3\fs25\fsmilli12800 \cf7 \cb4 \
+
+\f0\fs24 Internal iterator:\
+Iteration is handled internally by the collection, in internal iterators one needs to pass in function pointers for example enumerateWithBlock \cf9 \cb8 This offers several potential benefits: client code can be clearer because it need only focus on stating the problem, not the details of how to go about solving it, and we can move complex optimisation code into libraries where it can benefit all users.\cf7 \cb4 \
+ \
+External iterator:\
+Iteration is controlled by the client simple example is for loop \
+
+\f3\fs25\fsmilli12800 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf6 \cb3 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b\fs36 \cf6 \ul Behavioural Extension\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs28 \cf6 Visitor:
+\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b0\fs24 \cf6 \ulnone Separate out action part from the structure of data structure. Visitor implements the logic that is to be applied to the element whereas every element would have an method to accept the visitor which is passed as an argument to Accept method. Accept method of each element would invoke visit method by passing itself as an argument. Used in applying some logic action to different elements without cluttering the element class code.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \cb4 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screen Shot 2017-02-27 at 3.42.54 PM.png \width9940 \height9220
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf6 \cb3 \expnd0\expndtw0\kerning0
+\
+When to use:\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls3\ilvl0\cf5 \cb4 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+A complex object structure contains many other objects with differing interfaces (e.g. a composite), and you want to perform operations based on their concrete types. \
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+You need to perform many unrelated operations on objects in a composite structure without polluting their classes with these operations. You can keep related operations together in one visitor class and use it when the operations defined in the visitor are needed. \
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+You often need to add new operations to a complex structure and the classes that define the structure rarely change. \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf6 \cb3 \
+When a new type is added all the visitors need to be revisited and modified to support the new type.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b\fs36 \cf6 \ul \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs28 \cf6 Decorator:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b0\fs24 \cf6 \ulnone Adding new flavour to the existing class objects without losing their current flavour \cf5 \cb4 so an augmented object would be an enhanced version of the same class. Any \'93enhancement\'94 can be put on and taken off dynamically
+\f1\fs26\fsmilli13333 ,
+\f0\fs24 \cf6 \cb3  two ways to achieve one is through true subclass and the other through categories.   
+\b\fs28 \ul \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b0\fs24 \cf0 \cb4 \kerning1\expnd0\expndtw0 \ulnone {{\NeXTGraphic Decorator.png \width12300 \height7680
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+In this pattern Component is an abstract class which serves as parent, Decorator is again a refined abstract class. It encapsulates a component object which is used by concrete decorator classes to forward the call to the component. However concrete decorators will be overriding the method to add it\'92s own flavour and responsibilities.\
+\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+\cf5 \expnd0\expndtw0\kerning0
+If you need to add just one responsibility to the component, then you can omit the abstract Decorator class and let the ConcreteDecorators forward any requests to the component directly. If there are objects linked up this way, then it\'92s like forming a chain of operations with adding one behaviour over another
+\f1\fs26\fsmilli13333  
+\f2\fs24 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screen Shot 2017-03-02 at 5.57.53 PM.png \width10380 \height2680
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+In ObjectiveC, we can use categories to implement the decorator pattern but \cf5 \expnd0\expndtw0\kerning0
+it\'92s not a strict adaptation of it; it is fulfilling the intent but being done as a variant. The behavior added by Decorator categories is a compile-time artifact even though Objective-C supports dynamic binding (what implementation of a method should be used) by nature. Also Decorator categories don\'92t actually encapsulate an instance of the class being extended.
+\f1\fs26\fsmilli13333  \
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b\fs28\fsmilli14333 \cf5 \ul Chain Of Responsibility:\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf5 \ulnone The main idea of the Chain of Responsibility pattern is that an object has a reference to another object of the same type to form a chain. Each object in the chain implements the same method to handle the same request that is initiated on the first object in the chain. If any one of the objects doesn\'92t know how to handle the request, then it will pass the request to the next responder (successor).
+\f2 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screen Shot 2017-03-02 at 11.16.36 PM.png \width7700 \height5220
+}¬}\pard\pardeftab720\sl300\sa240\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 When to use:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls4\ilvl0\cf5 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+There is more than one object that may handle a request and the handler is known only at runtime. \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls5\ilvl0\cf5 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+You want to issue a request to a group of objects without specifying a particular receiver that will handle the request explicitly. 
+\f2 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \
+Object structure is given as below:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2017-03-02 at 11.17.19 PM.png \width10460 \height1900
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+The child handlers inherit two main components from the parent class, successor and handleRequest as shown above in the class diagram. Child handlers override the method for handling the request. In the child implementation of handleRequest, subclasses check if they can handle the request. If they are capable of handling then the request is handled if not then they invoke handleRequest of super which handles the request to the successor.
+\f2 \cf5 \expnd0\expndtw0\kerning0
+\
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf6 \cb3 \expnd0\expndtw0\kerning0
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b\fs36 \cf6 \ul Algorithm Encapsulation\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs26 \cf6 Template Pattern:\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\b0\fs24 \cf5 \cb4 \ulnone The basic idea is to define a \'93standard\'94 algorithm in a method of an abstract class. Within the method, it will call other primitive operations that are supposed to be overridden by subclasses. The method is called \'93template\'94 because the method defines the algorithm in which some unique operations are missing
+\f2 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screen Shot 2017-03-03 at 10.18.48 AM.png \width9880 \height5040
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+\cf5 \expnd0\expndtw0\kerning0
+The flow of control structure in the Template Method pattern is inverted, as a template method of a parent class calls operations of its subclass and not the other way around. \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 When to use:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls6\ilvl0
+\f1\fs26\fsmilli13333 \cf5 {\listtext	\'95	}
+\f0\fs24 \expnd0\expndtw0\kerning0
+You need to implement the invariant parts of an algorithm once and leave it up to subclasses to implement any specific behaviour that can vary. \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls6\ilvl0\cf5 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+Common behaviour of subclasses should be factored in a common class to avoid code duplication. Differences in existing code should be separated into  new operations. Then you replace the differing code with a template method that calls each of these new operations.\
+\ls6\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+Controlled subclass extensions are required. You can define a template method that calls \'93hook\'94 operations at specific points. Subclasses can extend the functionality at those points with the hook implementation. \
+\pard\tx566\pardeftab720\partightenfactor0
+\cf5 \
+\pard\tx566\pardeftab720\partightenfactor0
+\cf6 \cb3 Drawbacks of Template Pattern:
+\b\fs36 \ul \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b0\fs24 \cf6 \ulnone One could miss out implementing the abstract method and or implement additional method which was not required.\
+Maintenance could be difficult, as changes at any level could disturb the implementation\
+Subclasses are cognisant of the parent class implementation\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b\fs36 \cf6 \ul \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs28 \cf6 Strategy Pattern:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b0\fs24 \cf6 \ulnone Pattern is used to distribute variations of algorithms across classes. This pattern works based on having a parent class to define an interface that all the other child classes would override and place their variations of algorithm in them. This pattern is useful in avoiding large chunky if and else conditions in one place and makes code more readable and more maintainable. \
+\
+The UML diagram and implementation may be similar to that of bridge pattern however these two patterns solve two different problems. Strategy pattern is more concerned with respect to behaviour where as Bridge pattern is more concerned towards structuring. Secondly as mentioned earlier Bridge pattern is employed when we have to avoid outburst of classes because of combining orthogonal features in one class.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b\fs28 \cf6 \ul \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0\fs24 \cf0 \cb4 \kerning1\expnd0\expndtw0 \ulnone {{\NeXTGraphic Screen Shot 2017-03-03 at 12.02.29 PM.png \width11360 \height4640
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+One misconception is with Strategy pattern we can avoid conditional statements completely, instead we would still need to have conditional to choose among the various strategies. Instead Strategy pattern is an effort towards distributing the various conditional statements across various classes instead of having all the conditional statements in one place \'93Spaghetti Code\'94. \
+\
+When to use:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls7\ilvl0\cf5 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+A class uses multiple conditional statements in its operations to define many behaviours. You can move related conditional branches into their own strategy class. \
+\ls7\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+You need different variants of an algorithm. \
+\ls7\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+You need to avoid exposing complex and algorithm-specific data structures to clients. \
+\pard\tx566\pardeftab720\partightenfactor0
+
+\f2 \cf5 \
+\
+
+\b\fs28 \ul Command Pattern:
+\b0\fs24 \ulnone \
+\pard\tx566\pardeftab720\partightenfactor0
+
+\f0 \cf5 Command Pattern encapsulates request as an separate object instead of directly invoking it on an object. \
+The benefits of Command pattern \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls8\ilvl0\cf5 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+ Encapsulated request object can be queued up and invoked after some point of time (undo and redo)\
+\ls8\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+ Invoker doesn\'92t need to know any details of the target but can still be able to perform any available operations on it
+\f1\fs26\fsmilli13333 .\
+\pard\tx566\pardeftab720\partightenfactor0
+\cf5 \
+\pard\tx566\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf5 Cocoa implements Command pattern in NSInvocation, NSUndoManager and target-action mechanism (not so pure from of Command pattern as it does not create a separate request).\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Command.png \width11560 \height5640
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+When to use:\
+\pard\tx220\tx720\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li720\fi-720\pardirnatural\partightenfactor0
+\ls9\ilvl0\cf0 {\listtext	\'95	}To save a request for later point of time and reuse the same request multiple times.\
+{\listtext	\'95	}To keep the invoker and receiver independent with each of them not knowing the details of each other.\
+{\listtext	\'95	}Probably if the application supports undo and redo then command pattern can be very useful.\
+\pard\tx566\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+
+\b \ul NSInvocation:
+\b0 \ulnone \
+NSInvocation is just like the concrete command class which encapsulates target, selector, method signature and all other parameters into one object which can be stored and used at later point of time. \cf5 \expnd0\expndtw0\kerning0
+The same invocation instance can repeatedly invoke the same method on the receiver or be reused with different targets and methods signatures.
+\f1\fs26\fsmilli13333  
+\f2\fs24 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screen Shot 2017-03-05 at 8.53.19 PM.png \width11700 \height5720
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+In the above class diagram, concrete command class has been replaced by NSInvocation class. \cf5 \expnd0\expndtw0\kerning0
+The idea is that a client creates a new instance of NSInvocation object with an instance of Receiver and its operation as a selector. Then an Invoker (e.g., a UIButton object) will be set with the NSInvocation object. When the Invoker needs to invoke the action, it will call the invoke method of the NSInvocation object that is stored in the Invoker. Finally, the NSInvocation object will invoke the selector on its target to finish the process. \cf0 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+\cf5 \expnd0\expndtw0\kerning0
+The benefits of decoupling between command, invoker, receiver, and client in an application are apparent. If a particular command needs to be changed in the implementation, then most of the other components in the architecture remain intact. 
+\f2 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf5 \
+\pard\tx566\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b\fs28 \cf0 \kerning1\expnd0\expndtw0 \ul Prototype Pattern:\
+\pard\pardeftab720\partightenfactor0
+
+\b0\fs24 \cf9 \cb3 \expnd0\expndtw0\kerning0
+\ulnone The prototype pattern is a design pattern in which one object is created by copying another instance of an object. In swift this is how value types work for example structs, enum when you assign them a new copy is created with the values, however for reference type like classes one needs to take additional care. One way for reference type is to implement NSCopying protocol for which the class has to be subclassed from NSObject.}
